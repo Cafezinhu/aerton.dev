@@ -14,7 +14,7 @@ export default {
       strict: true
     }),
     prerender: {
-      entries: ['*', '/blog/post/testezinho']
+      entries: ['*']
     }
   },
   preprocess: vitePreprocess()

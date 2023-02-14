@@ -3,6 +3,7 @@
     import FaGithubSquare from 'svelte-icons/fa/FaGithubSquare.svelte';
     import FaDiscord from 'svelte-icons/fa/FaDiscord.svelte';
     import ContatoIcon from '../components/ContatoIcon.svelte';
+    import Link from '../components/Link.svelte';
 
     let contatos: HTMLDivElement;
 
@@ -16,12 +17,18 @@
         <p class="text-secondary-1 text-xl">Olá, meu nome é</p>
         <h1 class="text-gray-200 text-5xl md:text-6xl lg:text-9xl mb-2">Aerton Oliveira</h1>
         <h2 class="text-gray-300 text-xl">Sou desenvolvedor de software, construtor de sites, aplicativos e games.</h2>
-        <button 
-            class="border-secondary-1 rounded-md border-2 text-secondary-1 hover:bg-secondary-1 hover:text-primary-4 transition-all text-xl p-1 mt-3"
-            on:click={scrollToContatos}>
-            Entrar em contato
-        </button>
-        <a class="border-tertiary-1 rounded-md border-2 text-tertiary-1 hover:bg-tertiary-1 hover:text-primary-4 transition-all text-xl p-1 ml-2 cursor-pointer" href="/blog">Blog</a>
+        <div class="flex mt-3">
+            <button 
+                class="border-secondary-1 rounded-md border-2 text-secondary-1 hover:bg-secondary-1 hover:text-primary-4 transition-all text-xl p-1"
+                on:click={scrollToContatos}>
+                Entrar em contato
+            </button>
+            <Link href="/blog">
+                <div 
+                    class="border-tertiary-1 rounded-md border-2 text-tertiary-1 hover:bg-tertiary-1 hover:text-primary-4 transition-all text-xl p-1 ml-2 cursor-pointer" 
+                >Blog</div>
+            </Link>
+        </div>
     </div>
 </main>
 
